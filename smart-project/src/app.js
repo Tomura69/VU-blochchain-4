@@ -66,7 +66,6 @@ App = {
 
   	App.setLoading(false)
   },
-
   renderTasks: async() => {
   	const taskCount = await App.todoList.taskCount()
   	const $taskTemplate = $('.taskTemplate')
@@ -81,7 +80,8 @@ App = {
 		$newTaskTemplate.find('input')
 		              .prop('name', taskId)
 		              .prop('checked', taskCompleted)
-		              .on('click', App.toggleCompleted)
+		              .on('dblclick', App.remove)
+		              //.on('click', App.toggleCompleted)
 
 		if (taskCompleted) {
 			$('#completedTaskList').append($newTaskTemplate)
@@ -106,6 +106,15 @@ App = {
   	App.setLoading(true)
   	const taskId = e.target.name
   	await App.todoList.toggleCompleted(taskId)
+  	window.location.reload()
+  },
+
+  remove: async(e) => {
+  	let contentt = prompt("Enter new name", "Keisti")
+  	App.setLoading(true)
+  	alert(e)
+  	const taskRemove = e.target.name
+  	await App.todoList.remove(taskRemove, contentt)
   	window.location.reload()
   },
 
