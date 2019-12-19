@@ -10,7 +10,7 @@ Parašytas gan paprastas smart kontraktas, kuris užtikrina, kad galima būtų p
 Naudotojo interfeisui sukurti naudota js programavimo kalba, kuri kontaktuoja su smart kontraktu kaip ir valdo visą interfeisą. Stiliui kurti naudota bootstrap frameworkai.
 
 ## Srauto diagrama:
-![GitHub Logo](foto/Verslomodelis.jpg)
+![GitHub Logo](foto/Verslomodelis.png)
 
 ## Kontrakto paleidimas:
 ![GitHub Logo](foto/contraktu-paleidimas.png)
